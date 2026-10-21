@@ -1,0 +1,43 @@
+package br.mp.mpf.spea.simba.validador.enums;
+
+public enum CamposAtendimentoComum {
+   TIPO_ATENDIMENTO,
+   NUMERO_CASO,
+   CNPJ,
+   NUMERO_BANCO,
+   NOME_BANCO,
+   NOME_BANCO_ATENDIMENTO,
+   DATA_GERACAO_ARQUIVO,
+   NOME_FUNC_RESPONSAVEL,
+   TELEFONE_FUNC_RESPONSAVEL,
+   EMAIL_FUNC_RESPONSAVEL,
+   DATA_INICIO_AFASTAMENTO,
+   DATA_FIM_AFASTAMENTO,
+   NUMERO_CORREIO_BACEN,
+   NUMERO_OFICIO,
+   DATA_OFICIO,
+   NUMERO_PROCESSO,
+   NOME_TRIBUNAL,
+   NUMERO_VARA,
+   NOME_MAGISTRADO,
+   CARGO_MAGISTRADO,
+   DESCRICAO_CONTEUDO,
+   VERSAO_VALIDADOR,
+   TIPO_INSTITUICAO;
+
+   public static String[] getTodosCampos() {
+      String[] camposA = new String[values().length];
+      int i = 0;
+
+      for(CamposAtendimentoComum campo : values()) {
+         camposA[i++] = campo.toString();
+      }
+
+      return camposA;
+   }
+
+   // $FF: synthetic method
+   private static CamposAtendimentoComum[] $values() {
+      return new CamposAtendimentoComum[]{TIPO_ATENDIMENTO, NUMERO_CASO, CNPJ, NUMERO_BANCO, NOME_BANCO, NOME_BANCO_ATENDIMENTO, DATA_GERACAO_ARQUIVO, NOME_FUNC_RESPONSAVEL, TELEFONE_FUNC_RESPONSAVEL, EMAIL_FUNC_RESPONSAVEL, DATA_INICIO_AFASTAMENTO, DATA_FIM_AFASTAMENTO, NUMERO_CORREIO_BACEN, NUMERO_OFICIO, DATA_OFICIO, NUMERO_PROCESSO, NOME_TRIBUNAL, NUMERO_VARA, NOME_MAGISTRADO, CARGO_MAGISTRADO, DESCRICAO_CONTEUDO, VERSAO_VALIDADOR, TIPO_INSTITUICAO};
+   }
+}

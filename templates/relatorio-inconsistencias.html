@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>Simba - Validador Bancário</title>
+<style type="text/css">
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+}
+
+h2 {
+	text-align: center;
+	color: red;
+	font-size: 20pt;
+}
+
+.corpo {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ok {
+	background-image: url(data:image/jpg;base64,${imageOk});
+	width: 32px;
+	height: 32px;
+}
+
+.erro {
+	background-image: url(data:image/jpg;base64,${imageErro});
+	width: 32px;
+	height: 32px;
+}
+
+.wait {
+	background-image: url(data:image/jpg;base64,${imageWait});
+	width: 32px;
+	height: 32px;
+}
+
+.tableDiv table {
+	border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;    
+}
+
+.tableDiv .bordered {
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 12px;
+    border-radius: 6px;
+}
+
+.tableDiv .bordered tr:hover {
+    background: #fbf8e9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;     
+}    
+    
+.tableDiv .bordered td, .bordered th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 5px;
+    text-align: left;    
+}
+
+.tableDiv .bordered th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+}
+
+.tableDiv .bordered td:first-child, .bordered th:first-child {
+    border-left: none;
+}
+
+.tableDiv .bordered th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+.tableDiv .bordered th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.tableDiv .bordered th:only-child {
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.tableDiv .bordered tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.tableDiv .bordered tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+
+</style>
+</head>
+<body>
+	<div class="corpo">
+		<h2><img src="data:image/${extensaoLogo};base64,${logoBase64}" width="90" height="90" /><br>
+		    Validador Bancário<br>
+		    Relatório de Inconsistências
+		</h2>
+		<p>
+			<b><span style="font-size: 14pt">Caso: ${numeroCaso}</span></b>
+			<br>
+			<b>Data emissão: ${dataEmissao}</b>
+		</p>
+		<p>
+			<b>Banco:</b> ${numeroBanco} - ${nomeBanco}<br>
+			<b>Nome Funcionário Responsável:</b> ${nomeFuncionario}<br>
+			<b>Telefone:</b> ${telefoneFuncionario}<br>
+			<b>E-mail:</b> ${emailFuncionario}
+		</p>
+	
+		<div class="tableDiv" style="width: 300px">
+		<table class="bordered">
+			<tr>
+				<th width="150px">Arquivo</th>
+				<th width="150px">Formato</th>
+				<th width="150px">Conteúdo</th>
+			</tr>
+<!-- #foreach ($arquivo in $arquivos)  -->
+			<tr>
+				<td>${arquivo.nomeArquivo}</td>
+				<td><div class="${arquivo.formato}"></div></td>
+				<td><div class="${arquivo.conteudo}"></div></td>
+			</tr>
+<!-- #end  -->
+		</table>
+		</div>
+		<br>
+		<div align='justify'>
+			<div class="tableDiv">
+			<table class="bordered">
+				<tr>
+					<th width="170px">Arquivo</th>
+					<th width="70px">Linha</th>
+					<th>Descrição</th>
+				</tr>
+<!-- #foreach ($erro in $erros)  -->
+				<tr>
+					<td>${erro.arquivo}</td>
+					<td>${erro.linha}</td>
+					<td>${erro.message}</td>
+				</tr>
+<!-- #end  -->
+			</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
