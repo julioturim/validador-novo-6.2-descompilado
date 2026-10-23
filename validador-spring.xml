@@ -11,9 +11,9 @@
 
 	<bean id="connectionProvider" class="br.mp.mpf.pgr.client.jdbc.JdbcConnectionProvider"></bean>
 	
-	<bean id="configurador" class="br.mp.mpf.spea.simba.validador.ConfiguradorValidador"></bean>
+	<bean id="configurador" class="mp.mpf.spea.simba.validador.ConfiguradorValidador"></bean>
 
-	<bean id="controlador" class="br.mp.mpf.spea.simba.validador.ControladorValidador"></bean>
+	<bean id="controlador" class="mp.mpf.spea.simba.validador.ControladorValidador"></bean>
 
 	<bean id="bancoHSQLDB" class="DAO.BancoHSQLDB" scope="prototype"></bean>
 
@@ -23,7 +23,7 @@
 	
 	<bean id="frmDadosAtendimento" class="telas.frmDadosAtendimento" scope="prototype"></bean>
 	
-	<bean id="criarTabelasCmd" class="br.mp.mpf.spea.simba.validador.CriarTabelasValidador" scope="prototype"></bean>
+	<bean id="criarTabelasCmd" class="mp.mpf.spea.simba.validador.CriarTabelasValidador" scope="prototype"></bean>
 	
 	<bean id="frmTrataEnvio" class="telas.frmTrataEnvio" scope="prototype"></bean>
 
