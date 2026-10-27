@@ -4,13 +4,8 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/META-INF/maven/br.gov.mpf.pgr.asspa/simba-validador/pom.xml" />
+        <option value="$PROJECT_DIR$/src/META-INF/maven/br.gov.mpf.pgr.asspa/simba-validador/pom.xml" />
       </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/META-INF/maven/br.gov.mpf.pgr.asspa/simba-validador/pom.xml" />
-      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_27" project-jdk-name="openjdk-27" project-jdk-type="JavaSDK">
