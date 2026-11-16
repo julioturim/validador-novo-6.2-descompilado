@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Created-By: Maven JAR Plugin 3.4.2
+Build-Jdk-Spec: 25
+Class-Path: lib/spea-client-2.4.4.jar lib/jakarta.inject-api-2.0.1.jar l
+ ib/jakarta.annotation-api-2.1.1.jar lib/slf4j-api-2.0.17.jar lib/logbac
+ k-classic-1.5.32.jar lib/logback-core-1.5.32.jar lib/jul-to-slf4j-2.0.1
+ 7.jar lib/openpdf-html-3.0.0.jar lib/neko-htmlunit-4.14.0.jar lib/openp
+ df-3.0.0.jar lib/gson-2.13.2.jar lib/commons-io-2.4.jar lib/commons-cod
+ ec-1.18.0.jar lib/httpclient5-5.5.2.jar lib/httpcore5-5.3.6.jar lib/htt
+ pcore5-h2-5.3.6.jar lib/spring-context-6.2.18.jar lib/spring-aop-6.2.18
+ .jar lib/spring-beans-6.2.18.jar lib/spring-core-6.2.18.jar lib/spring-
+ jcl-6.2.18.jar lib/spring-expression-6.2.18.jar lib/micrometer-observat
+ ion-1.15.11.jar lib/micrometer-commons-1.15.11.jar lib/hsqldb-2.7.3.jar
+  lib/zip4j-2.6.1.jar lib/guava-33.4.8-jre.jar lib/failureaccess-1.0.3.j
+ ar lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar l
+ ib/jspecify-1.0.0.jar lib/error_prone_annotations-2.36.0.jar lib/j2objc
+ -annotations-3.0.0.jar lib/velocity-engine-core-2.4.1.jar lib/commons-l
+ ang3-3.17.0.jar
+Implementation-Title: Validador SIMBA
+Implementation-Version: 6.2.6
+Main-Class: br.mp.mpf.spea.simba.validador.Main
+
